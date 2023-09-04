@@ -23,7 +23,7 @@ function App() {
         <Categories state={state} updateCategory={(category) => dispatch({payload: category, type: "changeCategory"})} />
       </header>
       <div>
-        <Brands data={brands} />
+        <Brands data={brands} state={state} />
       </div>
     </div>
   )

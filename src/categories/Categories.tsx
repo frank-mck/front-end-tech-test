@@ -6,12 +6,13 @@ export default function Categories({ state, updateCategory}) {
       {title}
     </button>
   }
-  console.log(state)
+
   return (
     <div className="gap-x-4 gap-y-2 flex flex-wrap mb-[42px] mt-4">
       <Button title="ALL" />
       <Button title="FASHION" />
-      <Button title="VEGAN" />
+      <Button title="DRINKS" />
+      <Button title="FOOD" />
       <Button title="SPORTS" />
     </div>
   )
