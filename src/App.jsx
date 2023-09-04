@@ -12,7 +12,7 @@ function reducer(state, action) {
 }
 
 function App() {
-  const [state, dispatch] = useReducer(reducer, { age: 42 });
+  const [state, dispatch] = useReducer(reducer, { category: "ALL" });
   const { data } = useBrands();
   const brands = data?.data?.records
 
@@ -20,7 +20,7 @@ function App() {
     <div className="px-[77px]">
       <header>
         <h1 className="font-medium text-[55px]">SHOP</h1>
-        <Categories />
+        <Categories state={state} updateCategory={(category) => dispatch({payload: category, type: "changeCategory"})} />
       </header>
       <div>
         <Brands data={brands} />
